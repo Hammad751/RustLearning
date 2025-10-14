@@ -10,6 +10,7 @@ struct Point{
 
 struct Point3D(i32, i32, i32);
 
+#[derive(Debug)]
 struct Empty;
 
 #[derive(Debug)]
@@ -35,6 +36,11 @@ pub fn new_account(address: String) -> Account {
 
 }
 
+// struct User{
+//     active: bool,
+//     username: &str
+// }
+
 fn main(){
 
     let p = Point{x: 31, y:15};
@@ -45,6 +51,8 @@ fn main(){
 
     let empty = Empty;
 
+    println!("Empty: {:?}", empty);
+
     let circle = Circle{
         radius: 32,
         center: p
@@ -53,15 +61,22 @@ fn main(){
     println!("circle:  {:#?}", circle);
 
 
-    // Exercise
+    Exercise
 
     let data = new_account(String::from("0x1234567890abcdef"));
 
     println!("My account: {:#?}", data);
-    // let my_account = Account{
-    //     address: String::from("0x1234567890abcdef"),
-    //     balance: 0,
-    // };
-    // println!("My account: {:#?}", my_account);
+    let my_account = Account{
+        address: String::from("0x1234567890abcdef"),
+        balance: 0,
+    };
+    println!("My account: {:#?}", my_account);
+
+    let user = User{
+        active: true,
+        username: "Hammad"
+    };
+
+    println!("{:#?}", user);
 
 }
