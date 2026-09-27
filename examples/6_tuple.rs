@@ -5,7 +5,7 @@
 // Tuples are created using parentheses
 // Tuples can be destructured to access individual values
 
-fn return_tuple() -> (bool,  u32)  // Return many tuples
+fn return_tuple() -> (bool, u32)  // Return many tuples
 {
     (true, 1u32)  // These must not be any semicolon for returning the tuple
 }
@@ -26,6 +26,7 @@ fn main(){
     println!("Unit type: {:?}", ut);
 
     // Nested Tuple
+    println!("\nNested Tuple\n");
     let nt = (('v', 32), ("hammad", 30), (true, 1) );
 
 

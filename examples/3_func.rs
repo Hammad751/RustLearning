@@ -27,5 +27,19 @@ fn main(){
     let sum = add_with_return(x, y);
     let multi = mul(x,y);
     let divi = div(x,y);
-    println!("sum = {}, sum = {}, mul = {}, div = {}", sum, sum, multi, divi);
+    println!("sum = {}, \nsum = {}, with return statement \nmul = {}, \ndiv = {}", sum, sum, multi, divi);
+
+    // Expression
+    // An expression is a piece of code that evaluates to a value. 
+    // In Rust, expressions do not include ending semicolons. 
+    // If you add a semicolon at the end of an expression, it becomes a statement, which does not return a value.
+    // Calling a function is an expression
+    // calling a macro is an expression
+    // calling a block is an expression
+
+    let y = {
+        let x = 3;
+        x + 1 // This is an expression, no semicolon
+    };
+    println!("y = {}", y);
 }
