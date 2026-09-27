@@ -36,12 +36,13 @@ pub fn new_account(address: String) -> Account {
 
 }
 
-// struct User{
-//     active: bool,
-//     username: &str
-// }
+#[derive(Debug)]
+struct User {
+    active: bool,
+    username: &'static str,
+}
 
-fn main(){
+fn main(){  
 
     let p = Point{x: 31, y:15};
     println!("{:#?}", p);
@@ -61,7 +62,7 @@ fn main(){
     println!("circle:  {:#?}", circle);
 
 
-    Exercise
+    // Exercise
 
     let data = new_account(String::from("0x1234567890abcdef"));
 

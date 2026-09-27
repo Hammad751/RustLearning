@@ -22,7 +22,7 @@ fn div(x:u32, y: u32 ) -> u32 {
 fn main(){
     let x = 2;
     let y = 4;
-
+ 
     let sum = add(x, y);
     let sum = add_with_return(x, y);
     let multi = mul(x,y);

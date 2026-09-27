@@ -1,9 +1,11 @@
 #![allow(unused)]
 
+use std::println;
+
 // Constants
 // - constants will live inside the compile code
 // - while the other variables live inside the main function
-// - ecause the memory will be allocaed to the variables inside the main function
+// - because the memory will be allocaed to the variables inside the main function
 const NUM: u32 = 432;
 
 fn main(){
@@ -30,6 +32,13 @@ fn main(){
     let x: bool = true;
 
     println!("x = {}", x);
+
+    // We cannot change the type of variable when we use the 'mut' keyword
+    // this will through the error: mismatched types
+    let mut a = " ";
+    // a = a.len(); // this will through the error: mismatched types
+
+    println!("a: {a}");
 
     // type placeholder
     let x: _ = 123; // this will the compiler to find out the type of the variable

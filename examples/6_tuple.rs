@@ -5,7 +5,7 @@
 // Tuples are created using parentheses
 // Tuples can be destructured to access individual values
 
-fn return_tuple() -> (bool u32)  // Return many tuples
+fn return_tuple() -> (bool,  u32)  // Return many tuples
 {
     (true, 1u32)  // These must not be any semicolon for returning the tuple
 }
@@ -50,8 +50,7 @@ fn main(){
 
     // return multiple values using a tuple
 
-    let (x,z) = return_many();
-
-    println!(x {}, y{}, x,y;);
+    let (x, z) = return_tuple();
+    println!("x: {}, z: {}", x, z);
 
 }
